@@ -59,47 +59,61 @@ a, a:hover {
     margin: 0 auto;
 }
 
-#header {
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+header {
     position: absolute;
     padding: 20px 0;
     top: 20px;
     width: 100%;
 }
 
-.logo {
-    float: left;
-}
-
-.nav {
-    float: right;
+nav {
+    display: flex;
     padding-top: 5px;
 }
 
-.nav li {
-    float: left;
+.logo {
+    margin-right: auto;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
     margin-right: 40px;
 }
 
-.nav li:last-child {
+nav li:last-child {
     margin-right: 0;
 }
 
-.nav a {
+nav a {
     font: 14px Arial, sans-serif;
     color: #fff;
     text-transform: uppercase;
 }
 
-.nav a:hover {
+nav a:hover {
     color: #fed136;
 }
 
-#home {
+.home {
     height: 700px;
     padding-top: 270px;
     text-align: center;
     color: #fff;
-    background: #222 url(img/background.jpg) no-repeat center bottom;
+    background: #222 url(../img/background.jpg) no-repeat center bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -107,13 +121,15 @@ a, a:hover {
     
 }
 
-#home h3 {
+.home-small {
+    display: block;
     font: 40px/40px Arial, sans-serif;
     color: #fff;
     margin-bottom: 40px;
 }
 
-#home h1 {
+.home-big {
+    display: block;
     font: 75px/75px Arial, sans-serif;
     color: #fff;
     text-transform: uppercase;
@@ -150,7 +166,7 @@ a, a:hover {
 
 #contactus {
     text-align: center;
-    background: #222 url(img/map.png) no-repeat right bottom;
+    background: #222 url(../img/map.png) no-repeat right bottom;
 }
 
 #contactus h2.title {
@@ -170,10 +186,6 @@ a, a:hover {
 #brands {
     text-align: center;
     padding: 60px 0;
-}
-
-#footer {
-    padding: 25px 0;
 }
 
 h2.title {
@@ -221,15 +233,15 @@ h5 {
 }
 
 .commerce {
-    background: url(img/commerce.png) no-repeat center top;
+    background: url(../img/commerce.png) no-repeat center top;
 }
 
 .responsive {
-    background: url(img/responcive.png) no-repeat center top;
+    background: url(../img/responcive.png) no-repeat center top;
 }
 
 .security {
-    background: url(img/security.png) no-repeat center top;
+    background: url(../img/security.png) no-repeat center top;
 }
 
 .portfolio-item {
@@ -339,7 +351,7 @@ h5 {
     height: 40px;
     margin: 0 3px;
     border: 3px solid #222;
-    background: url(img/sn-icons.png) no-repeat;
+    background: url(../img/sn-icons.png) no-repeat;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
@@ -468,13 +480,26 @@ h5 {
     width: 48%;
 }
 
-#footer .social {
+footer {
+    padding: 25px 0;
+}
+
+footer .social {
     margin-top: 0;
     margin-left: 365px;
 }
 
-#footer p {
+footer p {
     margin-top: 13px;
     font: 14px/14px Arial, sans-serif;
     color: #555;
+}
+
+.footer-link {
+    color: #555;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
 }

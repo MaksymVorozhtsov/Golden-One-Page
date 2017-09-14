@@ -1,38 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="ru">
     <head>
         <meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Landing Page</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Golden One Page</title>
+        <link rel="stylesheet" href="css/normalize-7.0.0.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         
         <div id="wrapper">
-            <div id="header">
-                <div class="container clearfix">
-                    <div class="logo">
-                        <a href=""><img src="img/logo.png" alt="logo" /></a>
-                    </div> 
-                    <div class="nav">
-                        <ul>
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">SERVICES</a></li>
-                            <li><a href="#">PORTFOLIO</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">CONTACT</a></li>
-                        </ul> 
-                    </div> 
-                </div>
-            </div>
-            <div id="home">
+            <header>
+                <nav class="container">
+                    <a class="logo" href="#"><img src="img/logo.png" alt="logo" /></a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul> 
+                </nav>
+            </header>
+            
+            <section class="home">
                 <div class="container">
-                    <h3>Welcome to Our Studio</h3>
-                    <h1>It's nice to meet you</h1>
-                    <p class="btn">tell me more</p>
+                    <h1 class="visually-hidden">Web Studio Golden One</h1>
+                    <span class="home-small">Welcome to Our Studio</span>
+                    <span class="home-big">It's nice to meet you</span>
+                    <a class="btn">tell me more</a>
                 </div>
-            </div>
+            </section>
+            
             <div id="services" class="box">
                 <div class="container">
                     <h2 class="title">Services</h2>
@@ -240,9 +239,10 @@
                     </form>  
                 </div>
             </div>
-            <div id="footer">
+            
+            <footer>
                 <div class="container clearfix">
-                    <p class="left">&copy; 2017 Developed from PSD by Max</p>
+                    <p class="left">&copy; 2017 Developed from PSD by <a class="footer-link" href="https://github.com/MaksymVorozhtsov" target="_blank">Maksym Vorozhtsov</a></p>
                     <div class="social">
                         <a href="#" class="ic-twitter black">&nbsp;</a>
                         <a href="#" class="ic-fb black">&nbsp;</a>
@@ -250,7 +250,8 @@
                         <a href="#" class="ic-gplus black">&nbsp;</a>
                     </div>
                 </div>
-            </div>
+            </footer>
+            
         </div>
     </body>
 </html>
