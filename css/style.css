@@ -159,31 +159,35 @@ nav a:hover {
     padding: 120px 0;
 }
 
-#services,
-#aboutus {
+.services,
+.aboutus {
     text-align: center;
 }
 
-#contactus {
+.contactus {
     text-align: center;
     background: #222 url(../img/map.png) no-repeat right bottom;
 }
 
-#contactus h2.title {
+.contactus h2.title {
     color: #fff;
 }
 
-#portfolio {
+.contactus span.descr {
+    color: #fff;
+}
+
+.portfolio {
     text-align: center;
     background-color: #f7f7f7;
 }
 
-#team {
+.team {
     text-align: center;
     background-color: #f9f9f9;
 }
 
-#brands {
+.brands {
     text-align: center;
     padding: 60px 0;
 }
@@ -201,17 +205,22 @@ h5 {
     color: #222222;
 }
 
-.descr {
+span.descr {
+    display: block;
     font-size: 16px;
     color: #777777;
     margin-bottom: 10px;
 }
 
-.services-wrap,
 .portfolio-wrap,
 .about-wrap,
 .team-wrap,
 #message {
+    padding: 70px 0 0 0;
+}
+
+.services-wrap {
+    display: flex; 
     padding: 70px 0 0 0;
 }
 
@@ -220,7 +229,6 @@ h5 {
 }
 
 .services-item {
-    float: left;
     padding: 90px 10px 0;
     width: 33.33%
 }
@@ -418,16 +426,16 @@ h5 {
     background-position: -120px -40px; 
 }
 
-#brands a {
+.brands a {
     display: inline-block;
     margin-right: 40px;
 }
 
-#brands a:last-child {
+.brands a:last-child {
     margin-right: 0;
 }
 
-#brands img {
+.brands img {
     vertical-align: middle;
 }
 
