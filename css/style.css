@@ -38,14 +38,6 @@ a, a:hover {
     clear: both;
 }
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
 .text-right {
     text-align: right;
 }
@@ -205,17 +197,15 @@ h5 {
     color: #222222;
 }
 
-span.descr {
+.descr {
     display: block;
     font-size: 16px;
     color: #777777;
     margin-bottom: 10px;
 }
 
-.portfolio-wrap,
 .about-wrap,
-.team-wrap,
-#message {
+.message {
     padding: 70px 0 0 0;
 }
 
@@ -252,12 +242,21 @@ span.descr {
     background: url(../img/security.png) no-repeat center top;
 }
 
+.portfolio-wrap {
+    padding: 70px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio span.descr {
+    color: #000;
+}
+
 .portfolio-item {
     background: #fff;
     width: 31%;
     margin-right: 3.5%;
     margin-bottom: 50px;
-    float: left;
 }
 
 .portfolio-item:nth-child(3n) {
@@ -282,8 +281,13 @@ span.descr {
     color: #777;
 }
 
-.about-text {
-    width: 35%;
+.about-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-item div {
+    width: 33%;
 }
 
 .about-text h5 {
@@ -315,6 +319,7 @@ span.descr {
     content: '';
     display: block;
     margin: 0 auto;
+    margin-top: -5px;
     height: 94px;
     width: 3px;
     background: #f1f1f1;
@@ -329,8 +334,16 @@ span.descr {
     text-shadow: 0 1px rgba (0,0,0,0.3);
 }
 
+.about-link:hover {
+    background-color: #e8bb1f;
+}
+
+.team-wrap {
+    display: flex;
+    padding: 70px 0 0 0;
+}
+
 .team-item {
-    float: left;
     width: 33.33%;
     padding: 0 10px;
 }
@@ -439,8 +452,17 @@ span.descr {
     vertical-align: middle;
 }
 
-#message input[type="text"],
-#message textarea {
+.message-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-wrap div {
+    width: 48%;
+}
+
+.message input[type="text"],
+.message textarea {
     width: 100%;
     background: #fff;
     box-shadow: none;
@@ -454,12 +476,12 @@ span.descr {
     border-radius: 4px;
 }
 
-#message input[type="text"] {
+.message input[type="text"] {
     height: 50px;
     border: 1px solid #ccc;
 }
 
-#message textarea {
+.message textarea {
     border: none;
     height: 210px;
     resize: none;
@@ -483,18 +505,18 @@ span.descr {
     color: #bbb;
 }
 
-#message .left,
-#message .right {
-    width: 48%;
-}
-
 footer {
     padding: 25px 0;
 }
 
+footer div.container {
+    display: flex;
+    justify-content: flex-start;
+}
+
 footer .social {
     margin-top: 0;
-    margin-left: 365px;
+    margin-left: 45px;
 }
 
 footer p {
