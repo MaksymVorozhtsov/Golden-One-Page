@@ -28,16 +28,6 @@ a, a:hover {
     text-decoration: none;
 }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
 .text-right {
     text-align: right;
 }
@@ -100,6 +90,11 @@ nav a:hover {
     color: #fed136;
 }
 
+.menu-trigger {
+    text-align: center;
+    display: none;
+}
+
 .home {
     height: 700px;
     padding-top: 270px;
@@ -110,6 +105,7 @@ nav a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: #433F3E;
     
 }
 
@@ -181,7 +177,7 @@ nav a:hover {
 
 .brands {
     text-align: center;
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 h2.title {
@@ -210,12 +206,15 @@ h5 {
 }
 
 .services-wrap {
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 70px 0 0 0;
 }
 
 .team-info {
     margin-top: 50px;
+    margin-bottom: 0;
 }
 
 .services-item {
@@ -244,6 +243,7 @@ h5 {
 
 .portfolio-wrap {
     padding: 70px 0 0 0;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -254,7 +254,7 @@ h5 {
 
 .portfolio-item {
     background: #fff;
-    width: 31%;
+    width: 290px;
     margin-right: 3.5%;
     margin-bottom: 50px;
 }
@@ -286,7 +286,9 @@ h5 {
     justify-content: space-between;
 }
 
-.about-item div {
+.about-text,
+.about-img,
+.about-empty {
     width: 33%;
 }
 
@@ -340,6 +342,7 @@ h5 {
 
 .team-wrap {
     display: flex;
+    flex-wrap: wrap;
     padding: 70px 0 0 0;
 }
 
@@ -355,6 +358,10 @@ h5 {
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
+}
+
+.team-item:hover img {
+    border-color: #e8bb1f;
 }
 
 .team-item p {
@@ -442,6 +449,8 @@ h5 {
 .brands a {
     display: inline-block;
     margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .brands a:last-child {
@@ -455,6 +464,7 @@ h5 {
 .message-wrap {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .message-wrap div {
@@ -512,6 +522,7 @@ footer {
 footer div.container {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 footer .social {
@@ -520,7 +531,6 @@ footer .social {
 }
 
 footer p {
-    margin-top: 13px;
     font: 14px/14px Arial, sans-serif;
     color: #555;
 }
@@ -532,4 +542,213 @@ footer p {
 
 .footer-link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 90%;    
+    }
+    
+    .portfolio-wrap {
+        justify-content: space-between;    
+    }
+    
+    .portfolio-item {
+        width: 30%;
+    }
+    
+    .portfolio-item img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .box {
+        padding: 80px 0;
+    }
+    
+    nav li {
+    margin-right: 20px;
+    }
+    
+    .services-item h5.title {
+        font-size: 16px;
+    }
+    
+    .services-item p {
+        font-size: 14px;
+    }
+    
+    .portfolio-item {
+        width: 45%;
+    }
+    
+    .about-item {
+        margin-bottom: 80px;
+    }
+    
+    .about-img:after {
+        display: none;
+    }
+    
+    .about-empty {
+        display: none;
+    }
+    
+    .about-text {
+        width: 50%;
+    }
+    
+    .about-img {
+        width: 45%;
+    }
+    
+    .portfolio-item:nth-last-child(3) {
+        margin-bottom: 50px;
+    }
+    
+    .team-item img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .brands a {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .brands a:last-child {
+        margin-bottom: 0;
+    }
+
+
+    footer div.container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    footer p,
+    footer .social {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .logo {
+        margin: 0 auto;
+    }
+    
+    .menu-trigger {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: 0;
+        text-align: center;
+    }
+    
+    nav ul {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+    
+    nav li {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    h2.title {
+        font-size: 28px;
+    }
+    
+    .home-small {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    
+    .home-big {
+        font-size: 60px;
+        line-height: 60px;
+        
+    }
+    
+    .services-wrap {
+        padding: 30px 0 0 0;
+    }
+    
+    .services-item {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    .services-item:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+    
+    .portfolio-item {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .portfolio-item:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+    
+    .team-item {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    
+    .team-info {
+        margin: 0 auto;
+        margin-top: 0;
+        width: 98%;
+    }
+    
+    .brands a {
+        display: block;
+    }
+    
+    .message-wrap div {
+    width: 90%;
+    padding-left: 10%;
+}
+}
+
+@media (max-width: 390px) {
+    
+    .home-big {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    
+    .about-text {
+        margin: 0 auto;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .about-img {
+        display: none;
+    }
+}
+
+@media (min-width: 577px) {
+    nav ul { 
+        display: flex!important; 
+    } 
 }
